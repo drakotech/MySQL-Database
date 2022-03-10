@@ -1,14 +1,14 @@
--------------------------
+-- -----------------------
 -- Schema Configuration
--------------------------
+-- -----------------------
 
 CREATE SCHEMA [IF NOT EXISTS] `bottega_schema` ;
 
 
-------------------------
+-- ----------------------
 -- Table Configuration
 --   - professors
-------------------------
+-- ----------------------
 
 CREATE TABLE `bottega_schema`.`professors` (
     `professors_id` INT NOT NULL AUTO_INCREMENT,
@@ -22,9 +22,9 @@ CREATE TABLE `bottega_schema`.`professors` (
 );
 
 
------------------
+-- ---------------
 --   - students
------------------
+-- ---------------
 
 CREATE TABLE `bottega_schema`.`students` (
     `students_id` INT NOT NULL AUTO_INCREMENT,
@@ -37,9 +37,9 @@ CREATE TABLE `bottega_schema`.`students` (
 );
 
 
-----------------
+-- --------------
 --   - courses
-----------------
+-- --------------
 
 CREATE TABLE `bottega_schema`.`courses` (
     `courses_id` INT NOT NULL AUTO_INCREMENT,
@@ -66,13 +66,13 @@ CREATE TABLE `bottega_schema`.`courses` (
 );
 
 
----------------
+-- -------------
 --   - grades
----------------
+-- -------------
 
 CREATE TABLE `bottega_schema`.`grades` (
     `grades_id` INT NOT NULL AUTO_INCREMENT,
-    `grades_title` VARCHAR(10) NOT NULL,
+    `grades_value` DECIMAL(3,2) NOT NULL,
     `grades_students_id` INT NOT NULL,
     `grades_courses_id` INT NOT NULL,
     
