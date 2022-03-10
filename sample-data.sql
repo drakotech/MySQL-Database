@@ -52,6 +52,12 @@ VALUES ("Biology", 2, 5);
 INSERT INTO courses(courses_title, courses_professors_id, courses_students_id)
 VALUES ("Biology", 2, 6);
 
+INSERT INTO courses(courses_title, courses_professors_id, courses_students_id)
+VALUES ("Math", 1, 4);
+
+INSERT INTO courses(courses_title, courses_professors_id, courses_students_id)
+VALUES ("Calculus", 1, 4);
+
 
 -- ----------
 -- Grades
@@ -73,3 +79,9 @@ VALUES (3.50, 5, 5);
 
 INSERT INTO grades(grades_value, grades_students_id, grades_courses_id)
 VALUES (4.00, 6, 6);
+
+INSERT INTO grades(grades_value, grades_students_id, grades_courses_id)
+VALUES (4.00, 4, 7);
+
+INSERT INTO grades(grades_value, grades_students_id, grades_courses_id)
+VALUES (4.00, 4, 8);
