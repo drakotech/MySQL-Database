@@ -62,3 +62,19 @@ JOIN grades
 ON courses_id = grades_courses_id
 GROUP BY courses_title
 ORDER BY AVG(grades_value);
+
+
+
+-- -------------------------------------------------------
+-- Most Courses in Common Between Student and Professor
+-- -------------------------------------------------------
+SELECT 
+s.students_name AS "Student",
+p.professors_name AS "Professor", 
+COUNT(professors_name) AS "Common Courses",
+COUNT(students_name) AS "Common Courses"
+FROM courses c
+JOIN students s
+ON c.courses_students_id = s.students_id
+JOIN professors p
+ON c.courses_professors_id = p.professors_id;
